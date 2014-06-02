@@ -207,10 +207,28 @@ ul.upperRightNames li {
 }
 
 .modal {
-	width: 30%;
+	width: 80%;
 	height: 600px;
 	background: white;
 	margin: 0 auto;
+}
+
+.gallery {
+	width: 55%;
+	float: left;
+	height: 100%;
+}
+
+.blurb {
+	text-align: left;
+	width: 45%;
+	float: left;
+	height: 100%;
+}
+
+.paragraphs p {
+	color:black;
+	text-align: left;
 }
 
 .close {

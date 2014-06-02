@@ -17,11 +17,18 @@ var weather = {
 			dataType : "jsonp",
 			success : function(data){
 				var w = data.current_observation;
+				console.log(w);
+				var main = w.weather
 				var temp = w.temp_c;
 				var precip = w.precip_today_metric;
 				var date = w.local_time_rfc822;
 				var hour = date.slice(17,19);
 				var day = date.slice(0,3);
+
+				$("h2.condition").text(main);
+				// $("h3.subtext").text(sub);
+				$(".paragraphs").append("<p>This is a test string</p>");
+				$(".paragraphs").append("<p>Does another work too?</p>");
 
 				//date and time
 				if (hour > 13) {
@@ -41,6 +48,7 @@ var weather = {
 				//hot and dry
 				if (temp > 20 && (precip == 0 || precip == "--")) {
 					console.log(1)
+
 				};
 
 				//hot and wet
