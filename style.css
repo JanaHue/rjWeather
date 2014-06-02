@@ -1,0 +1,196 @@
+html {
+
+	/*background-color: black;*/
+	background-size: cover;
+
+
+	background: url(bg1.jpg) no-repeat center center fixed;
+
+	transition: all 1s;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url('polina.jpg') no-repeat;
+    background-size: cover;
+}
+
+
+input:focus {
+    outline-width: 0;
+}
+
+input {
+
+	text-transform: uppercase;
+}
+
+input[type=text] {
+
+	padding:5px; 
+	border-radius: 0px;
+
+
+}
+
+
+input[type=submit] {
+
+	padding:6px 20px; 
+	background:#ccc; 
+	border:0 none;
+	cursor:pointer;
+	border-radius: 0px; 
+	color: white;
+	transition: all .3s;
+	border: 1px solid white;
+  	background-color: rgba(255,255,255, 0.5);
+}
+
+input[type=submit]:hover {
+
+  	background-color: black;
+ 	color: white;
+}
+
+
+
+
+body {
+
+	/*background-color: black;
+	background-size: cover;
+	background-repeat:repeat-x;
+	background-repeat:no-repeat;
+
+	background-image: url(bg1.jpg);*/
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+p {
+	color: white;
+	text-align: center;
+	letter-spacing: .8px;
+}
+
+p.headerName {
+
+	font-weight: 300;
+	font-style: italic;
+	letter-spacing: 3px;
+	line-height: 30px;
+	font-size: 24px;
+}
+
+.span-text {
+
+	font-weight: 400;
+
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+
+.button {
+ 
+  margin: 0 auto;
+  margin-top: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  color: rgba(255,255,255, 0.3);
+
+  text-align: center;
+  width: 150px;
+  transition: all .3s;
+  border: 1px solid rgba(255,255,255, 0.3);
+
+  background-color: rgba(255,255,255, 0.1);
+}
+
+.button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+
+
+
+
+
+p.nameOfApp {
+
+	font-weight: 300;
+	font-style: italic;
+	letter-spacing: 3px;
+	line-height: 30px;
+	font-size: 17px;
+
+}
+
+p.info {
+
+	font-weight: 100;
+	font-size: 22px;
+}
+
+
+.header {
+
+	margin-bottom: 2px;		
+}
+
+ul.upperLeftSocial {
+
+	text-align: left;
+	padding: 0px 0px;
+	float: left;
+	width: 50%;
+}
+
+ul.upperLeftSocial li {
+
+	display:inline-block;
+	position: relative;
+	text-decoration: none;
+	padding-right: 5px;
+}
+
+ul.upperRightNames {
+
+	text-align: right;		
+	padding: 0px 0px;
+	float: left;
+	width: 50%;
+}
+
+ul.upperRightNames li {
+
+	display:inline-block;
+	position: relative;
+	text-decoration: none;
+	padding-right: 5px;
+}
+
+.greyIcon {
+
+	color: white;
+}
