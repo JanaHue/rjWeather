@@ -202,15 +202,17 @@ ul.upperRightNames li {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: rgba(0,0,0,0.4);
+	background: rgba(255,255,255,0.35);
 	display: none;
 }
 
 .modal {
-	width: 80%;
+	width: 60%;
 	height: 600px;
 	background: white;
-	margin: 0 auto;
+	margin: 110px auto;
+	box-shadow: 0 0 2px 0 rgba(255,255,255, .7);
+
 }
 
 .gallery {
@@ -238,4 +240,16 @@ ul.upperRightNames li {
 
 .show {
 	display: block;
+}
+
+.theX {
+
+	background-image: url("x.svg");
+	background-repeat: no-repeat;
+	text-indent: -99999px;
+
+	padding: 10px;
+	margin:20px ;
+
+	float: right;
 }
