@@ -16,6 +16,10 @@ var weather = {
 			type : "GET",
 			dataType : "jsonp",
 			success : function(data){
+				if(!data.current_observation) {
+					$(".paragraphs").append("<p class='error'>Please be super specific, ie. Toronto, Canada</p>");
+					return false;
+				}
 				var w = data.current_observation;
 				console.log(w);
 				var main = w.weather
@@ -24,9 +28,9 @@ var weather = {
 				var date = w.local_time_rfc822;
 				var hour = date.slice(17,19);
 				var day = date.slice(0,3);
-
+				var sub = "You should wear";
 				$("h2.condition").text(main);
-				// $("h3.subtext").text(sub);
+				$("h3.subtext").text(sub);
 				$(".paragraphs").append("<p>This is a test string</p>");
 				$(".paragraphs").append("<p>Does another work too?</p>");
 
@@ -101,7 +105,7 @@ var weather = {
 					console.log(11)
 				};
 
-			}
+			} //end success function
 		}); //end ajax
 	},
 
@@ -110,6 +114,9 @@ var weather = {
 			e.preventDefault();
 			var city = $("input[type=text]").val();
 			weather.getWeather(city);
+			$("h2.condition").empty();
+			$("h3.subtext").empty();
+			$(".paragraphs").empty();
 		});
 	},
 
