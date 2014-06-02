@@ -202,10 +202,22 @@ ul.upperRightNames li {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: #000;
+	background: rgba(0,0,0,0.4);
+	display: none;
 }
 
 .modal {
 	width: 30%;
-	height: ;
+	height: 600px;
+	background: white;
+	margin: 0 auto;
+}
+
+.close {
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.show {
+	display: block;
 }

@@ -3,6 +3,8 @@ var weather = {
 	
 	init : function(){
 		weather.pullValue();
+		weather.openModal();
+		weather.closeModal();
 	},
 
 	getWeather : function(city){
@@ -103,6 +105,19 @@ var weather = {
 		});
 	},
 
+	openModal : function(){
+		$("form.city").on("submit", function(e){
+			$(".overlay").fadeIn();
+
+		});
+	},
+
+	closeModal : function(){
+		$(".overlay").fadeOut();
+	},
+
+	
+
 }; //end namespace
 
 
@@ -110,6 +125,7 @@ var weather = {
 $(function() {
 	weather.init();
 }); //end doc ready
+
 
 
 
