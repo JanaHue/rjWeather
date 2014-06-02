@@ -113,10 +113,17 @@ var weather = {
 	},
 
 	closeModal : function(){
-		$(".overlay").fadeOut();
+		$(".overlay").on('click', function(e){
+			if ($(e.currentTarget).hasClass("closeModal")){
+				$(".overlay").fadeOut();
+			}
+		});
+		$(document).on("keydown", function(e){
+			if (e.which == 27){
+				$(".overlay").fadeOut();
+			}
+		});
 	},
-
-	
 
 }; //end namespace
 
