@@ -20,6 +20,8 @@ var weather = {
 					$(".paragraphs").append("<p class='error'>Please be super specific, ie. Toronto, Canada</p>");
 					return false;
 				}
+
+				var filter = []; 
 				var w = data.current_observation;
 				console.log(w);
 				var main = w.weather
@@ -33,78 +35,92 @@ var weather = {
 				$("h3.subtext").text(sub);
 				$(".paragraphs").append("<p>This is a test string</p>");
 				$(".paragraphs").append("<p>Does another work too?</p>");
-
 				//date and time
 				if (hour > 13) {
 					console.log("it's after 1pm");
+					filter.push("n");
 				}
 				else {
 					console.log("it's before 1pm");
+					filter.push("m");
 				};
 
 				if (day == "Sat" || day == "Sun") {
 					console.log("it's the weekend");
+					filter.push("p");
 				}
 				else {
 					console.log("it's a weekday");
+					filter.push("w");
 				};
 				
 				//hot and dry
 				if (temp > 20 && (precip == 0 || precip == "--")) {
 					console.log(1)
-
+					filter.push("a","5");
 				};
 
 				//hot and wet
 				if (temp > 20 && precip > 0) {
 					console.log(2)
+					filter.push("a","4");
 				};
 
 				//warm and dry
 				if (temp <= 20 && temp > 12 && (precip == 0 || precip == "--")) {
 					console.log(3)
+					filter.push("b","5");
 				};
 			
 				//warm and wet
 				if (temp <= 20 && temp > 12 && precip > 0) {
 					console.log(4)
+					filter.push("b","4");
 				};	
 
 				//cool and dry
 				if (temp <= 12 && temp > 8 && (precip == 0 || precip == "--")) {
 					console.log(5)
+					filter.push("c","5");
 				};
 
 				//cool and wet
 				if (temp <= 12 && temp > 8 && precip > 0) {
 					console.log(6)
+					filter.push("c","4");
 				};
 
 				//cold and dry
 				if (temp <= 8 && temp >= 0 && (precip == 0 || precip == "--")) {
 					console.log(7)
+					filter.push("d","5");
 				};
 
 				//cold and wet
 				if (temp <= 8 && temp >= 0 && precip > 0) {
 					console.log(8)
+					filter.push("d","4");
 				};
 
 				//really cold and dry
 				if (temp < 0 && temp > -15 && (precip == 0 || precip == "--")) {
 					console.log(9)
+					filter.push("e","5");
 				};
 
 				//really cold and wet
 				if (temp < 0 && temp > -15 && precip > 0 ) {
 					console.log(10)
+					filter.push("e","4");
 				};
 			
 				//freezing
 				if (temp < -15) {
 					console.log(11)
+					filter.push("f");
 				};
 
+				console.log(filter)
 			} //end success function
 		}); //end ajax
 	},
@@ -117,6 +133,7 @@ var weather = {
 			$("h2.condition").empty();
 			$("h3.subtext").empty();
 			$(".paragraphs").empty();
+
 		});
 	},
 
@@ -138,6 +155,12 @@ var weather = {
 				$(".overlay").fadeOut();
 			}
 		});
+	},
+
+	resetForm : function(){
+		//find a way to clear the form
+		//when does this function get called?
+		// filter.length = 0;
 	},
 
 }; //end namespace
