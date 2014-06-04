@@ -1,4 +1,4 @@
-
+ 
 var weather = {
 	
 	init : function(){
