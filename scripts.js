@@ -164,7 +164,7 @@ var weather = {
 					p1 = "Something";
 					p2 = "Individual";
 				};
-				
+
 				$(".paragraphs").append("<p>"+p1+"</p>");
 				$(".paragraphs").append("<p>"+p2+"</p>");
 				// console.log(p1);
@@ -198,29 +198,6 @@ var weather = {
 		// 	}
 		// });
 	},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	resetForm : function(){
 		//find a way to clear the form
